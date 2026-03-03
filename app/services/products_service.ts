@@ -7,19 +7,22 @@
     /* To fetch All Products  */
     static async getProducts():Promise <Product[]> {
       const productResponse = await fetch(this.getUrl('/products'),{
-        cache: "no-store"
+        next:{revalidate:60}
       })
       if (!productResponse.ok){
-        throw new Error('failed to fetch products')
+        console.error("API ERROR:",productResponse.status)
+        return []
       }
      return await productResponse.json()
     }
 
     /* To fetch single Product */
     static getProductsById = async (id:number) => {
-      const productResponse = await fetch(this.getUrl(`/products/${id}`))
+      const productResponse = await fetch(this.getUrl(`/products/${id}`),{
+         next:{revalidate:60}
+      })
       if (!productResponse.ok){
-        throw new Error('failed to fetch product')
+        console.error("Failed to fetch product:", productResponse.status)
       }
       return await productResponse.json()
     }
