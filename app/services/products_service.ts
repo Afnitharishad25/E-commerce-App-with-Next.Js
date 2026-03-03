@@ -6,7 +6,9 @@
   
     /* To fetch All Products  */
     static async getProducts():Promise <Product[]> {
-      const productResponse = await fetch(this.getUrl('/products'))
+      const productResponse = await fetch(this.getUrl('/products'),{
+        cache: "no-store"
+      })
       if (!productResponse.ok){
         throw new Error('failed to fetch products')
       }

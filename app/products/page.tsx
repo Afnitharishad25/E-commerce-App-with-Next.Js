@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 
 import { ProductsService } from "../services/products_service";
 import ProductPageClient from "./ProductPageClient";
