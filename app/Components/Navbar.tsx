@@ -49,7 +49,7 @@ function Navbar()  {
         <div className="collapse navbar-collapse" id="navbarContent">
 
           {/* All Products */}
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
              <li className="nav-item">
                <Link className="nav-link text-light" href="/products">Products</Link>
             </li>
