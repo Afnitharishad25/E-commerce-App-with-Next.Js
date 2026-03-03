@@ -28,7 +28,7 @@ function Navbar()  {
   );
   
   return (
-   <nav className="navbar navbar-expand-lg navbar-light bg-dark shadow-sm sticky-top">
+   <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
       <div className="container">
 
         {/* Brand */}
@@ -84,7 +84,7 @@ function Navbar()  {
 
             {/* Account login */}
             <li className="nav-item me-3">
-              <Link className="nav-Link" href="/Login">
+              <Link className="nav-link" href="/Login">
                 <i className="bi bi-person fs-5 text-warning"></i>
               </Link>
             </li>
