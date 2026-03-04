@@ -8,12 +8,15 @@ type Props = {
 };
 
 export default function ProductList({ products, search ,clear}: Props) {
-  
-  const searchTerm = search?.toLowerCase() || ""
 
-  const filteredProducts = products.filter((p) =>
+  const searchTerm = (search ?? "").trim().toLowerCase()
+
+  const filteredProducts = 
+    searchTerm === ""
+    ? products
+    : products.filter((p) =>
     p.title.toLowerCase().includes(searchTerm)
-  );
+    );
 
   return (
     <div className="container  min-vh-100 mt-4">
