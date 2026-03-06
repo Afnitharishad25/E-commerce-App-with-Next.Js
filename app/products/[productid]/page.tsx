@@ -9,7 +9,7 @@ type Props = {
   params: Promise<{ productid: string }>
 }
 
-export default async function ProductDetail({ params}:Props) {
+export default async function ProductDetail({ params}:any) {
   
   const { productid } = await params   //  unwrap params
   const id = Number(productid)
