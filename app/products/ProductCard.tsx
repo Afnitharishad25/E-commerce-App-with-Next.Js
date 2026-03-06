@@ -18,7 +18,7 @@ function ProductCard({ product }: Props) {
       {/*for product card display */}
       <div className="card h-100">
         <Link href={`/products/${product.id}`} className="btn btn-sm">
-          <img src={product.image} className="card-img-top w-50" height="200"/>
+          <img src={product.thumbnail} className="card-img-top w-50" />
         </Link>
         <div className="card-body text-center">
           <h6 className="text-truncate">{product.title}</h6>

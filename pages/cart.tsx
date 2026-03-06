@@ -26,7 +26,7 @@ export default function CartPage() {
                 <div className="row g-0 align-items-center">
 
                     <div className="col-md-3">
-                    <img src={item.image} className="img-fluid p-3" alt={item.title}/>
+                    <img src={item.thumbnail} className="img-fluid p-3" alt={item.title}/>
                     </div>
 
                     <div className="col-md-6">

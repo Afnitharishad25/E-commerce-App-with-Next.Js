@@ -9,7 +9,7 @@ type Props = {
     id: number;
     title: string;
     price: number;
-    image:string
+    thumbnail:string
   };
 };
 
@@ -33,7 +33,7 @@ export default function ProductActions({product}:Props) {
         id: product.id,
         title: product.title,
         price: product.price,
-        image:product.image
+        thumbnail:product.thumbnail
       });
 
       setAdded(true);

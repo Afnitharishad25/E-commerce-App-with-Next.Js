@@ -1,5 +1,5 @@
 import { Product } from "@/types/product"
-import ProductCard from "./ProductCard/ProductCard";
+import ProductCard from "../products/ProductCard"
 
 type Props = {
   products: Product[];
@@ -45,7 +45,8 @@ export default function ProductList({ products, search ,clear}: Props) {
         </div>
       )}
 
-      {filteredProducts.map((p) => (
+      {Array.isArray(filteredProducts)&&
+      filteredProducts.map((p) => (
         <ProductCard key={p.id} product={p}/>
       ))}
     </div>

@@ -13,7 +13,8 @@
         console.error("API ERROR:",productResponse.status)
         return []
       }
-     return await productResponse.json()
+      const data = await productResponse.json()
+      return data.products 
     }
 
     /* To fetch single Product */

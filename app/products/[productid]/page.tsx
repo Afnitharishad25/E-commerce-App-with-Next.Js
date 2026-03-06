@@ -19,7 +19,7 @@ export default async function ProductDetail({ params}:any) {
 
  return (
     <div className="container mt-5 min-vh-100">
-      <img src={product.image} width="150" height="200"/>
+      <img src={product.thumbnail} width="150" height="150"/>
        <h2>{product.title}</h2>
       <p>{product.description}</p>
       <h4>AED{product.price}</h4>
